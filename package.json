@@ -1,7 +1,7 @@
 {
   "name": "student_homework_generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Generates the homework folders for students to use",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -12,5 +12,13 @@
   "type": "module",
   "dependencies": {
     "moment": "^2.29.1"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@git.generalassemb.ly:seir63anz/Homework.git"
   }
 }
