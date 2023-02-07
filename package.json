@@ -1,0 +1,16 @@
+{
+  "name": "student_homework_generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
+}
