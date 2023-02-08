@@ -24,7 +24,7 @@ while (!isTrue) {
     } else if (answer > number) {
         answer = prompt(`Try again! it is smaller than ${answer}!`)
     } else if (answer == number) {
-        alert("Congratulations! That is correct.")
+        alert(`Congratulations! That is correct. The number is ${answer}`)
         isTrue = true
     } else {
         answer = prompt("Try a number!")
