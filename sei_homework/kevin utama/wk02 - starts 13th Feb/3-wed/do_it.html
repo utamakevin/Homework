@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+    li {
+      font-size: 2rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #sun {
+      background-color: gold;
+    }
+
+    #mercury {
+      background-color: brown;
+    }
+
+    #earth img {
+      width: 100px;
+    }
+
+    .venus {
+      background-color: orange;
+    }
+
+    #mars {
+      background-color: red;
+    }
+    
+    .dwarf-planet {
+      text-decoration: 'line-through';
+    }
+  </style>
+</head>
+<body>
+    <h1>welcome to the universe</h1>
+
+    <div class="jupiter troll"></div>
+  
+    <ul class="planets">
+      <li id="sun">sun</li>
+      <li id="mercury">mercury</li>
+      <li class="venus">venus</li>
+      <li id="earth">
+        <img src="https://i.pinimg.com/originals/00/c0/d6/00c0d62dd33940dcae030dd4c618b8ff.png" alt="">
+      </li>
+      <li id="mars">mars</li>
+      <li class="jupiter">jupiter</li>
+      <li>
+        <input type="text" class="saturn" value="saturn">
+      </li>
+      <li id="uranus">uranus</li>
+      <li>
+        <input type="text" value="neptune">
+      </li>
+      <li id="pluto">pluto</li>
+    </ul>
+
+    <button class="plus-one-btn">plus one</button>
+    <button class="tomato-color-btn">tomato color</button>
+    <button class="destroy-btn">destroy all planets</button>
+
+    <script>
+      // IMPORTANT!!! answer the following using javascript only and without modifying any HTML
+
+      // 1. change the text "sun" to "cheese"
+        // document.querySelector("#sun").textContent =  "cheese"
+
+      // 2. change the text "welcome to the universe" to "do not change any html code"
+        // document.querySelector("h1").textContent = "do not change any html code"
+
+      // 3. change the text "mercury" to 5
+        // document.querySelector("#mercury").textContent = 5
+
+      // 4. change the text "mars" to your favourite number (pick any number)
+        // let favNumber = 10
+        // document.querySelector("#mars").textContent = favNumber
+
+      // 5. change the font colour of jupiter to purple
+        // document.querySelectorAll(".jupiter")[1].style.color = "purple"
+
+      // 6. clicking on the plus one button should increment your favourite number by one. clicking again should increment again.
+        // plusOneBtn = document.querySelector(".plus-one-btn")
+        // plusOneBtn.addEventListener("click", function() {
+        //   favNumber++
+        //   document.querySelector("#mars").textContent = favNumber
+        // })
+
+      // 7. change the text "saturn" to "sega saturn"
+        // document.querySelector("#mars").textContent = "sega saturn"
+
+      // 8. clicking on the tomato color button should set the background colour of pluto to tomato
+        // tomatoButton = document.querySelector(".tomato-color-btn")
+        // pluto = document.querySelector("#pluto")
+        // tomatoButton.addEventListener("click", function() {
+        //   pluto.style.backgroundColor = "tomato"
+        // })
+
+      // 9. using the className property set pluto to have the class dwarf-planet
+        // document.querySelector("#pluto").className = "dwarf-planet"
+
+    </script>
+</body>
+</html>
