@@ -20,13 +20,7 @@ const balance = document.querySelector(".balance")
 const moreInfo = document.querySelector(".more-info")
 const withdrawCount = document.querySelector(".withdraw-counter")
 
-
-
 console.log(btn1)
-
-
-
-
 
 const num1Input = document.querySelector(".num1-input")
 const num2Input = document.querySelector(".num2-input")
