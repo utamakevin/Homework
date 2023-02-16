@@ -18,6 +18,7 @@ const display = document.querySelector("#display")
 const balance = document.querySelector(".balance")
 
 const moreInfo = document.querySelector(".more-info")
+const withdrawCount = document.querySelector(".withdraw-counter")
 
 
 
@@ -31,7 +32,9 @@ const num1Input = document.querySelector(".num1-input")
 const num2Input = document.querySelector(".num2-input")
 const p = document.querySelector("p")
 
-let withdrawCounter = 0
+let withdrawCounter = 10
+
+
 
 function handleInput(e) {
 
@@ -64,13 +67,17 @@ function handleDeposit(e) {
 function handleWithdraw(e) {
     let result = 0
     
-    withdrawCounter++
+    withdrawCounter--
     
-    if(withdrawCounter < 11) {
+    if(withdrawCounter >= 0) {
         result = Number(balance.textContent) - Number(display.value)
-    } else {
+
+        withdrawCount.textContent = `You are eligible for ${withdrawCounter} free withdrawals.`
+        
+        } else {
+        
         result = Number(balance.textContent) - Number(display.value) - 2
-        moreInfo.textContent = "You are now charged $2 for every withdrawal"
+        withdrawCount.textContent = "You are now charged $2 for every withdrawal"
     }
     
     
@@ -111,5 +118,3 @@ btnClr.addEventListener("click", handleClear)
 
 deposit.addEventListener("click", handleDeposit)
 withdraw.addEventListener("click", handleWithdraw)
-
-
