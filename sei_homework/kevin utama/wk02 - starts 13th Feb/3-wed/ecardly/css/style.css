@@ -1,15 +1,18 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    /* border: 1px solid red; */
 }
 
 header {
     background-image: url(../images/background.jpg);
+    background-repeat: repeat-x;
 }
 
 header div {
     margin-bottom: 20px;
 }
+
 
 .logo {
     display: block;
@@ -45,10 +48,12 @@ body {
 .right-wrapper {
     width: 30%;
     vertical-align: top;
+    margin-left: 12px;
 }
 
 h2 {
     margin-top: 25px; 
+    text-align: left;
 }
 
 span, a {
