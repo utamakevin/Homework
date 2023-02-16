@@ -28,10 +28,13 @@ body {
 }
 
 .main-wrapper {
-    margin: auto;
+    /* margin: auto;
     width: 90%;
+    text-align: center; */
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
     padding: 10px;
-    text-align: center;
 }
 
 .left-wrapper, .right-wrapper {
@@ -42,13 +45,14 @@ body {
 }
 
 .left-wrapper {
-    width: 60%;
+    /* width: 60%; */
 }
 
 .right-wrapper {
-    width: 30%;
+    /* width: 30%;
     vertical-align: top;
-    margin-left: 12px;
+    margin-left: 12px; */
+    align-self: flex-start;
 }
 
 h2 {
