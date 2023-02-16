@@ -26,6 +26,14 @@ h1 {
 .main-container {
     width: 80%;
     margin: 0 auto;
-    background-color: #989595;
+    background-color: #c0dc9a;
     border: 5px solid black;
+}
+
+#display {
+    margin: 20px 0 20px 0;
+}
+
+.balance {
+    font-size: 30px;
 }

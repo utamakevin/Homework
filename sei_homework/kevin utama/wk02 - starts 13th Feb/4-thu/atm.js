@@ -31,6 +31,8 @@ const num1Input = document.querySelector(".num1-input")
 const num2Input = document.querySelector(".num2-input")
 const p = document.querySelector("p")
 
+let withdrawCounter = 0
+
 function handleInput(e) {
 
   console.log(`button ${e.target.id} pressed`)
@@ -60,8 +62,17 @@ function handleDeposit(e) {
 }
 
 function handleWithdraw(e) {
+    let result = 0
     
-    let result = Number(balance.textContent) - Number(display.value)
+    withdrawCounter++
+    
+    if(withdrawCounter < 11) {
+        result = Number(balance.textContent) - Number(display.value)
+    } else {
+        result = Number(balance.textContent) - Number(display.value) - 2
+        moreInfo.textContent = "You are now charged $2 for every withdrawal"
+    }
+    
     
     if(result > 0) {
         balance.textContent = result
@@ -74,6 +85,8 @@ function handleWithdraw(e) {
         insufficientFunds()
     }
     display.value = ""
+
+    
 }
 
 function insufficientFunds() {
