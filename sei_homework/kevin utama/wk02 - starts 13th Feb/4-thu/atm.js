@@ -50,7 +50,7 @@ function handleClear(e) {
 function handleDeposit(e) {
     let result = Number(balance.textContent) + Number(display.value)
     balance.textContent = result
-    
+    moreInfo.textContent = ""
 
     if(balance.textContent !== 0) {
     document.body.style.backgroundColor = "white"

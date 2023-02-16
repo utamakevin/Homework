@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     text-align: center;
+    /* border: 1px solid red; */
 }
 
 h1 {
@@ -9,7 +10,7 @@ h1 {
     text-align: center;
 }
 
-.balance-prompt,{
+.balance-prompt {
     text-align: center;
 }
 
@@ -20,4 +21,11 @@ h1 {
 
 .more-info {
     color: red;
+}
+
+.main-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #989595;
+    border: 5px solid black;
 }
