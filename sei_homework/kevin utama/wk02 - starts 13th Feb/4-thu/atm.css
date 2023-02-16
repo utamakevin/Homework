@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.balance-prompt,{
+    text-align: center;
+}
+
+.sign {
+    align-content: right;
+
+}
+
+.more-info {
+    color: red;
+}
