@@ -5,11 +5,10 @@
 
 // let seconds = 0
 // let timerId = null
-// let i = 0
 
 // resetBtn.addEventListener("click", function() {
 //     console.log("reset button clicked")
-//     clearInterval(i)
+//     clearInterval(timerId)
 //     seconds = 0
 //     timer.textContent = "Stop Watch"
 // })
@@ -18,13 +17,12 @@
 //     console.log("start button clicked")
 //     updateTime()
 //     timer.textContent = `Time elapsed: ${seconds} s`
-//     setInterval(updateTime, 1000)
-//     i++
+//     timerId = setInterval(updateTime, 1000)
 // })
 
 // pauseBtn.addEventListener("click", function() {
 //     console.log("pause button clicked")
-//     clearInterval(i)
+//     clearInterval(timerId)
 // })
 
 
@@ -44,7 +42,6 @@ const stopWatch = {
 
     seconds : 0,
     timerId : null,
-    i : 0,
 
     updateTime : function() {
         stopWatch.seconds++
@@ -53,7 +50,7 @@ const stopWatch = {
 
     resetHandler : function() {
         console.log("reset button clicked")
-        clearInterval(stopWatch.i)
+        clearInterval(stopWatch.timerId)
         stopWatch.seconds = 0
         stopWatch.timer.textContent = "Stop Watch"
     },
@@ -62,13 +59,12 @@ const stopWatch = {
         console.log("start button clicked")
         stopWatch.updateTime()
         stopWatch.timer.textContent = `Time elapsed: ${stopWatch.seconds} s`
-        setInterval(stopWatch.updateTime, 1000)
-        stopWatch.i++
+        stopWatch.timerId = setInterval(stopWatch.updateTime, 1000)
     },
 
     pauseHandler : function() {
         console.log("pause button clicked")
-        clearInterval(stopWatch.i)
+        clearInterval(stopWatch.timerId)
     }
 }
 
