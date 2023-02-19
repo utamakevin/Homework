@@ -49,27 +49,29 @@ const stopWatch = {
     updateTime : function() {
         stopWatch.seconds++
         stopWatch.timer.textContent = `Time elapsed: ${stopWatch.seconds} s`
+    },
+
+    resetHandler : function() {
+        console.log("reset button clicked")
+        clearInterval(stopWatch.i)
+        stopWatch.seconds = 0
+        stopWatch.timer.textContent = "Stop Watch"
+    },
+
+    startHandler : function() {
+        console.log("start button clicked")
+        stopWatch.updateTime()
+        stopWatch.timer.textContent = `Time elapsed: ${stopWatch.seconds} s`
+        setInterval(stopWatch.updateTime, 1000)
+        stopWatch.i++
+    },
+
+    pauseHandler : function() {
+        console.log("pause button clicked")
+        clearInterval(stopWatch.i)
     }
-
-
 }
 
-stopWatch.resetBtn.addEventListener("click", function() {
-    console.log("reset button clicked")
-    clearInterval(stopWatch.i)
-    stopWatch.seconds = 0
-    stopWatch.timer.textContent = "Stop Watch"
-})
-
-stopWatch.startBtn.addEventListener("click", function() {
-    console.log("start button clicked")
-    stopWatch.updateTime()
-    stopWatch.timer.textContent = `Time elapsed: ${stopWatch.seconds} s`
-    setInterval(stopWatch.updateTime, 1000)
-    stopWatch.i++
-})
-
-stopWatch.pauseBtn.addEventListener("click", function() {
-    console.log("pause button clicked")
-    clearInterval(stopWatch.i)
-})
+stopWatch.resetBtn.addEventListener("click", stopWatch.resetHandler)
+stopWatch.startBtn.addEventListener("click", stopWatch.startHandler)
+stopWatch.pauseBtn.addEventListener("click", stopWatch.pauseHandler)
