@@ -34,6 +34,13 @@
 
 
 const stopWatch = {
+    // this is a shorthand version to write a function
+    init() {
+        stopWatch.resetBtn.addEventListener("click", stopWatch.resetHandler)
+        stopWatch.startBtn.addEventListener("click", stopWatch.startHandler)
+        stopWatch.pauseBtn.addEventListener("click", stopWatch.pauseHandler)
+
+    },
 
     resetBtn : document.querySelector("#reset"),
     startBtn : document.querySelector("#start"),
@@ -68,6 +75,4 @@ const stopWatch = {
     }
 }
 
-stopWatch.resetBtn.addEventListener("click", stopWatch.resetHandler)
-stopWatch.startBtn.addEventListener("click", stopWatch.startHandler)
-stopWatch.pauseBtn.addEventListener("click", stopWatch.pauseHandler)
+stopWatch.init()
