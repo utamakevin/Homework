@@ -132,4 +132,10 @@ let resident = {
 // scream(7) //=> "lololololololol"
 // scream(10) //=> "lolololololololololol"    
 
-    scream()
+function scream (index) {
+        if(index < 1) {
+            return 'crickets'
+        } else {
+            return 'l' + 'ol'.repeat(index)
+        }
+    }
