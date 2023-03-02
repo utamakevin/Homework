@@ -14,25 +14,25 @@
         // }
     // res is the response tag, and title is the query key. The request would be /example?title=<value of title key>
 
-    // Question 3 (3pt)
-    // app.get("/", (res, req) => {
-    //   let slogan = "I love CSS"
-    //   res.render("home", { message: slogan })
-    // })
-    // in the 4 lines of code above what is:
-    
-        // the name of the template?
-            // boilerplate for a request and response for a route to root directory of the server (/) using express.js
-        // what is the path of the route?
-            // root path (/)
-        // what is the value of the message property?
-            // the value of slogan, which is "I love CSS" string
-        // there is a bug. can you spot it?
-            // the respond tag (second parameter of the app.get) is named req
-            // app.get("/", (res, req) => {
-            //                    ^
-            // the res is refering to the first parameter, which is allocated for request.
-            // render is a respond from the server. Therefore, the function is wrong for such purpose.
+// Question 3 (3pt)
+// app.get("/", (res, req) => {
+//   let slogan = "I love CSS"
+//   res.render("home", { message: slogan })
+// })
+// in the 4 lines of code above what is:
+
+    // the name of the template?
+        // home
+    // what is the path of the route?
+        // root path (/)
+    // what is the value of the message property?
+        // the value of slogan, which is "I love CSS" string
+    // there is a bug. can you spot it?
+        // the respond tag (second parameter of the app.get) is named req
+        // app.get("/", (res, req) => {
+        //                    ^
+        // the res is refering to the first parameter, which is allocated for request.
+        // render is a respond from the server. Therefore, the function is wrong for such purpose.
 
 // Question 4 (2pt)
 // Assume the following object...
