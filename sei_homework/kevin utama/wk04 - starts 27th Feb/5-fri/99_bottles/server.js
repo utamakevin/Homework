@@ -26,6 +26,10 @@ app.get('/:number', (req, res) => {
 
 })
 
+app.get('/test', (req, res) => {
+    res.render('test')
+})
+
 app.get('/1', (req, res) => {
     res.render('one')
 })
