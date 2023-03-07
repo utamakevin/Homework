@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Details</h1>
+
+    <p><%= planet.name %></p>
+
+    <img src="/<%= planet.image_url %>" alt="">
+
+    <p>Diameter: <%= planet.diameter %></p>
+    <p>Mass: <%= planet.mass %></p>
+    <p>Moon Count: <%= planet.moon_count %></p>
+
+    <form action="/delete_planet" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="planet_id" value="<%= planet.id %>">
+        <button>Delete</button>
+    </form>
+
+    <a href="/edit_planet/<%= planet.id %>">Edit</a>
+</body>
+</html>
