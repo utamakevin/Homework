@@ -20,25 +20,25 @@ app.get('/', (req, res) => {
 app.get('/search', (req, res) => {
     omdb.findManyByTitle(req.query.title, (err, movieList) => {
         let movieTitleListArray = []
-        let imdbidListArray = []
+        // let imdbidListArray = []
         for(movie of movieList.Search) {
-            imdbidListArray.push(movie.imdbID)
+            // imdbidListArray.push(movie.imdbID)
             movieTitleListArray.push(movie.Title)
         }
         // console.log(imdbidListArray)
         // console.log(movieTitleListArray)
-        res.render('search', { movieTitleListArray, imdbidListArray})
+        res.render('search', { movieTitleListArray })
     }
     )
 })
 
-app.get('/check_db/:id/:title', (req, res) => {
+app.get('/check_db/:title', (req, res) => {
     const sql = `SELECT title FROM movies WHERE title ='${req.params.id}'`
     pool.query(sql, (err, dbRes) => {
         if(dbRes.rowCount !== 0) {
             res.send(dbRes.rows[0].title)
         } else {
-            res.redirect(`movie?title=${req.params.title}`)
+            res.redirect(`/movie?title=${req.params.title}`)
         }
     })
 })
