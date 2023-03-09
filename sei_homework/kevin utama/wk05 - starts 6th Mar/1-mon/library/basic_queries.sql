@@ -30,9 +30,9 @@ select title from books;
 -- Get all books which have `the` somewhere in their title (hint, look up LIKE/ILIKE)
   -- does it include the that are in a middle of a word (eg. thesaurus, bathe)?
     -- yes
-      select * from boks where title ilike '%the%';
+      select * from books where title ilike '%the%';
     -- no
-      select * from boks where title ilike '% the %';
+      select * from books where title ilike '% the %';
 
 -- Add yourself as an author
   insert into authors(name, nationality, birth_year) values ('Kevin', 'Indonesia', 1997);
