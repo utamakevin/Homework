@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* background-size: cover; */
+    background-position: center;
+    background-clip: content-box;
+    background-size:40%;
+}
+
+#palette {
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+}
+
+#pixel-holder {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 10px)
+}
+
+#pixel-holder div {
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    display:inline-block;    
+}
