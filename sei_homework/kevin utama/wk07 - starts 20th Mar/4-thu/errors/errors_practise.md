@@ -174,7 +174,7 @@ Write code to intentionally generate these errors yourself! You can edit the `<s
   <script>
   function getHelp() {
     return getHelp()
-  }
+  } 
 
   getHelp()
   </script>
