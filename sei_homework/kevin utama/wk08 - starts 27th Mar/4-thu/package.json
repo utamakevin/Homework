@@ -1,0 +1,15 @@
+{
+  "name": "4-thu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "leap_year.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}
