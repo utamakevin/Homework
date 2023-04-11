@@ -1,0 +1,7 @@
+.counter * {
+    margin: 0 5px;
+}
+
+.counter p {
+    display: inline;
+}
