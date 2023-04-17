@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import Data from './data.json'
-import IceCream from './IceCream'
+import './Menu.css'
 
 
 export default function Menu() {
     const [data, setData] = useState([])
-    const i = 4
+    // const i = 4
 
     useEffect(() => {
         setData(Data)
@@ -14,17 +14,18 @@ export default function Menu() {
 
     // console.log(data)
     return (
+        <main className="main">
         {data.map(menu => (
-            <section>
+            <section key={menu.name} className="menu-wrapper">
                 <h2>{menu.name}</h2>
                 <h3>{menu.base} ice cream with {menu.topping} to top</h3>
                 {menu.hasChocolateChips && 
-                    <div>
+                    <div className="withChocChips">
                         <p>comes with choc chips</p>
                     </div>
                 }
             </section>
         ))}
-
+        </main>
         )
 }
