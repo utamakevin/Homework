@@ -5,14 +5,12 @@ import './Menu.css'
 
 export default function Menu() {
     const [data, setData] = useState([])
-    // const i = 4
 
     useEffect(() => {
         setData(Data)
 
     }, [])
 
-    // console.log(data)
     return (
         <main className="main">
         {data.map(menu => (
