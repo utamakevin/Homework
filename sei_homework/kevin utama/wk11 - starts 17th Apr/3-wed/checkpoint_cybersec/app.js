@@ -12,16 +12,17 @@ const unit = data
 
 let result = {}
 
+
 for (i = 0; i < unit.length; i++) {
-    result[unit[i].split(',')[0]] = []
+    result[unit[i].split(',')[0]] = [] // added names
 }
 
 for (i = 0; i < unit.length; i++) {
     result[unit[i].split(',')[0]].push({
-        product: unit[i].split(',')[1],
-        unitPrice: unit[i].split(',')[2],
-        units: unit[i].split(',')[3],
-        totalPrice: (unit[i].split(',')[2] * unit[i].split(',')[3]).toFixed(2)
+        product: unit[i].split(',')[1], // added products
+        unitPrice: unit[i].split(',')[2], // added unit price
+        units: unit[i].split(',')[3], // added units
+        totalPrice: (unit[i].split(',')[2] * unit[i].split(',')[3]).toFixed(2) // calculates total price
     })
 }
 
