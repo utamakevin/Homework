@@ -21,7 +21,7 @@ for (i = 0; i < unit.length; i++) {
         product: unit[i].split(',')[1],
         unitPrice: unit[i].split(',')[2],
         units: unit[i].split(',')[3],
-        totalPrice: unit[i].split(',')[2] * unit[i].split(',')[3]
+        totalPrice: (unit[i].split(',')[2] * unit[i].split(',')[3]).toFixed(2)
     })
 }
 
