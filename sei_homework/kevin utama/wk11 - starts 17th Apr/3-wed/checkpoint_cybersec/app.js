@@ -30,5 +30,10 @@ for (i = 0; i < unit.length; i++) {
 
 console.log(result)
 
+// module.exports = test
+
+function sum(num1, num2) {
+    return num1 + num2
+}
 
 module.exports = result
