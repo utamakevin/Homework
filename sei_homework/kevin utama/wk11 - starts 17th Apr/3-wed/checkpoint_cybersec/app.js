@@ -8,6 +8,7 @@ const unit = data
     .split('\\n')
     .slice(1)
     .filter(elem => elem.trim() !== '')
+    .filter(elem => !(elem.includes('Misty Rose')))
 
 
 let result = {}
