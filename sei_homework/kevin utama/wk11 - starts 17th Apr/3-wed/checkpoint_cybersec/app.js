@@ -1,5 +1,4 @@
 const fs = require('fs')
-const util = require('util')
 
 const data = JSON.stringify(fs.readFileSync('./data.txt', 'utf8'))
 
